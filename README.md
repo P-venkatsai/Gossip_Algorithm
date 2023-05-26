@@ -32,7 +32,7 @@ If all the surrounding nodes of node 11 have converged, they stop sending messag
 
 ### Normal Scale
 
-![Normal Scale](/path/to/normal_scale_graph.png)
+![Normal Scale](root/Coveregence_Images/3D (1).jpg)
 
 ### Log Scale (base 2)
 
