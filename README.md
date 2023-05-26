@@ -32,11 +32,11 @@ If all the surrounding nodes of node 11 have converged, they stop sending messag
 
 ### Normal Scale
 
-![Normal Scale](root/Coveregence_Images/3D (1).jpg)
+![Normal Scale](Coveregence_Images/first.png)
 
 ### Log Scale (base 2)
 
-![Log Scale](/path/to/log_scale_graph.png)
+![Log Scale](Coveregence_Images/second.png)
 
 Time = 2^(time shown on graph)
 
@@ -45,6 +45,8 @@ Time = 2^(time shown on graph)
 In the PushSum algorithm, nodes converge when the difference in the S/W ratio doesn't change in three consecutive iterations. When a node receives a message of S and W, it adds S and W to its current S and W values, and then keeps half of the current S and W values while sending the other half as gossip. The main difference between Gossip and PushSum is that Gossip can blindly send messages (spread messages) to all other nodes once it receives the first message, but PushSum cannot do so as the S and W values keep changing. To solve this, we check the S and W values before sending every gossip by exchanging messages with actors.
 
 Unlike Gossip, an actor in PushSum stops spreading the gossip once it converges. This is because in PushSum, the number of received messages required for an actor to converge is much larger compared to Gossip. Additionally, convergence in PushSum depends on the S/W ratio. Therefore, the problem of messages not reaching a small percentage of nodes does not occur.
+
+![Architecture](Coveregence_Images/third.png)
 
 ## Observations
 
@@ -56,11 +58,11 @@ Unlike Gossip, an actor in PushSum stops spreading the gossip once it converges.
 
 1. Normal Scale
 
-![Normal Scale](/path/to/pushsum_normal_scale_graph.png)
+![Normal Scale](Coveregence_Images/fourth.png)
 
 2. Log Scale (base 10)
 
-![Log Scale](/path/to/pushsum_log_scale_graph.png)
+![Log Scale](Coveregence_Images/fifth.png)
 
 Time = 10^(time shown on graph)
 
@@ -80,7 +82,7 @@ Time = 10^(time shown on graph)
 3. 3D Grid: 10,000 nodes
 4. 2D Grid: 1,000 nodes
 
-*Note: Screenshots of the execution are available in the SS folder for reference.*
+*Note: Screenshots of the execution are available in the Convergence_Images  folder for reference.*
 
 ## Steps to Execute the Project
 
